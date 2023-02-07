@@ -1,6 +1,6 @@
 ---
 title: Remote Testing in Visual Studio
-description: Learn how to use remote testing in Visual Studio Test Explorer to run tests from remote environments including containers, WSL2, or over SSH connections. This topic covers how to configure remote testing with a testenvironments.json for either local containers, WSL2, or SSH connections.
+description: Learn how to use remote testing in Visual Studio Test Explorer to run tests from remote environments including containers, WSL2, or over SSH connections. This topic covers how to configure remote testing with a testEnvironments.json for either local containers, WSL2, or SSH connections.
 ms.date: 08/26/2021
 ms.topic: how-to
 author: mikejo5000
@@ -27,7 +27,7 @@ Requirements for using this experimental version of remote testing:
 
 ## Set up the remote testing environment
 
-Environments are specified using `testenvironments.json` in the root of your solution. The json file structure follows the schema described here:
+Environments are specified using `testEnvironments.json` in the root of your solution. The json file structure follows the schema described here:
 ```json
 {
     "version": "1", // value must be 1
@@ -37,7 +37,7 @@ Environments are specified using `testenvironments.json` in the root of your sol
     ]
 }
 ```
-#### Properties of an environment in testenvironments.json 
+#### Properties of an environment in testEnvironments.json 
 | Property         | Type | Description |
 | ----------------- | ---- | -------------------------------- |
 | name | string | User-friendly environment name that appears in Test Explorer. It must be unique within a testEnvironments.json file. |
@@ -61,7 +61,7 @@ For a Dockerfile, the environment can be specified in `testEnvironments.json` in
 }
 ```
 
-The following example shows `testenvironments.json` for a local container image named \<mcr.microsoft.com/dotnet/core/sdk\>.
+The following example shows `testEnvironments.json` for a local container image named \<mcr.microsoft.com/dotnet/core/sdk\>.
 ```json
 {
     "version": "1",
